@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Browser & Responsive Test Rapport — Zelfevaluatie Scouting</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #1a1a2e;
+      background: #fff;
+      padding: 40px 50px;
+      font-size: 11pt;
+      line-height: 1.6;
+    }
+
+    h1 {
+      font-size: 22pt;
+      font-weight: 800;
+      color: #1A368D;
+      margin-bottom: 4px;
+    }
+
+    h2 {
+      font-size: 15pt;
+      font-weight: 700;
+      color: #1A368D;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #1A368D;
+    }
+
+    h3 {
+      font-size: 12pt;
+      font-weight: 600;
+      color: #333;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 10pt;
+      color: #666;
+      margin-bottom: 6px;
+    }
+
+    .meta {
+      display: flex;
+      gap: 30px;
+      margin: 16px 0 10px;
+      padding: 12px 16px;
+      background: #f0f4ff;
+      border-radius: 8px;
+      font-size: 9.5pt;
+    }
+
+    .meta-item { display: flex; flex-direction: column; }
+    .meta-label { font-weight: 700; color: #1A368D; font-size: 8pt; text-transform: uppercase; letter-spacing: 0.5px; }
+    .meta-value { color: #333; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 16px;
+      font-size: 10pt;
+    }
+
+    th {
+      background: #1A368D;
+      color: #fff;
+      padding: 8px 12px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 9pt;
+    }
+
+    td {
+      padding: 8px 12px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    tr:nth-child(even) td { background: #f8f9ff; }
+
+    .screenshot-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      margin: 16px 0;
+    }
+
+    .screenshot-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fafafa;
+      break-inside: avoid;
+    }
+
+    .screenshot-card img {
+      width: 100%;
+      display: block;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .screenshot-label {
+      padding: 8px 10px;
+      font-size: 8.5pt;
+      font-weight: 600;
+      color: #333;
+      text-align: center;
+    }
+
+    .screenshot-size {
+      font-weight: 400;
+      color: #888;
+      display: block;
+      font-size: 8pt;
+    }
+
+    .badge-pass {
+      display: inline-block;
+      background: #d4edda;
+      color: #155724;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 9pt;
+      font-weight: 600;
+    }
+
+    .badge-warn {
+      display: inline-block;
+      background: #fff3cd;
+      color: #856404;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 9pt;
+      font-weight: 600;
+    }
+
+    .note-box {
+      background: #e8f4fd;
+      border-left: 4px solid #1A368D;
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 12px 0;
+      font-size: 9.5pt;
+      color: #1a1a2e;
+    }
+
+    .success-box {
+      background: #d4edda;
+      border-left: 4px solid #28a745;
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 12px 0;
+      font-size: 9.5pt;
+    }
+
+    .conclusion-card {
+      background: linear-gradient(135deg, #1A368D 0%, #2a5298 100%);
+      color: #fff;
+      padding: 20px 24px;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+
+    .conclusion-card h3 { color: #fff; margin-top: 0; }
+    .conclusion-card p { color: rgba(255,255,255,0.9); }
+
+    .page-break { page-break-before: always; }
+
+    @media print {
+      body { padding: 20px 30px; }
+      .page-break { page-break-before: always; }
+      .screenshot-card { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Browser & Responsive Test Rapport</h1>
+  <p class="subtitle">Zelfevaluatie Teamleider Scouting — Frontend Webapplicatie</p>
+
+  <div class="meta">
+    <div class="meta-item">
+      <span class="meta-label">Datum</span>
+      <span class="meta-value">25 juni 2026</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Browser</span>
+      <span class="meta-value">Chromium (geautomatiseerd)</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Geteste schermen</span>
+      <span class="meta-value">Startscherm, Overzicht, Invullen</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Formaten</span>
+      <span class="meta-value">Mobiel, Tablet, Desktop</span>
+    </div>
+  </div>
+
+  <!-- ===================== SECTIE 1: STARTSCHERM ===================== -->
+  <h2>1. Startscherm — Screenshots</h2>
+  <p>Het selectiescherm waar gebruikers een speltak kiezen (Explorers &amp; Roverscouts of Bevers, Welpen &amp; Scouts).</p>
+
+  <div class="screenshot-grid">
+    <div class="screenshot-card">
+      <img src="screenshots/mobile_start.png" alt="Startscherm Mobiel">
+      <div class="screenshot-label">
+        Mobiel
+        <span class="screenshot-size">375 x 667 px (iPhone SE)</span>
+      </div>
+    </div>
+    <div class="screenshot-card">
+      <img src="screenshots/tablet_start.png" alt="Startscherm Tablet">
+      <div class="screenshot-label">
+        Tablet
+        <span class="screenshot-size">768 x 1024 px (iPad)</span>
+      </div>
+    </div>
+    <div class="screenshot-card">
+      <img src="screenshots/desktop_start.png" alt="Startscherm Desktop">
+      <div class="screenshot-label">
+        Desktop
+        <span class="screenshot-size">1920 x 1080 px (Full HD)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SECTIE 2: OVERZICHTSSCHERM ===================== -->
+  <div class="page-break"></div>
+  <h2>2. Overzichtsscherm — Screenshots</h2>
+  <p>Het overzicht met alle modules/taken en hun voortgang, inclusief de navigatiebalk.</p>
+
+  <div class="screenshot-grid">
+    <div class="screenshot-card">
+      <img src="screenshots/mobile_overview.png" alt="Overzicht Mobiel">
+      <div class="screenshot-label">
+        Mobiel
+        <span class="screenshot-size">375 x 667 px</span>
+      </div>
+    </div>
+    <div class="screenshot-card">
+      <img src="screenshots/tablet_overview.png" alt="Overzicht Tablet">
+      <div class="screenshot-label">
+        Tablet
+        <span class="screenshot-size">768 x 1024 px</span>
+      </div>
+    </div>
+    <div class="screenshot-card">
+      <img src="screenshots/desktop_overview.png" alt="Overzicht Desktop">
+      <div class="screenshot-label">
+        Desktop
+        <span class="screenshot-size">1920 x 1080 px</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SECTIE 3: INVULSCHERM ===================== -->
+  <div class="page-break"></div>
+  <h2>3. Invulscherm (Vragenlijst) — Screenshots</h2>
+  <p>Het scherm waar gebruikers vragen beantwoorden met een schaal van 1 tot 5.</p>
+
+  <div class="screenshot-grid">
+    <div class="screenshot-card">
+      <img src="screenshots/mobile_question.png" alt="Invulscherm Mobiel">
+      <div class="screenshot-label">
+        Mobiel
+        <span class="screenshot-size">375 x 667 px</span>
+      </div>
+    </div>
+    <div class="screenshot-card">
+      <img src="screenshots/tablet_question.png" alt="Invulscherm Tablet">
+      <div class="screenshot-label">
+        Tablet
+        <span class="screenshot-size">768 x 1024 px</span>
+      </div>
+    </div>
+    <div class="screenshot-card">
+      <img src="screenshots/desktop_question.png" alt="Invulscherm Desktop">
+      <div class="screenshot-label">
+        Desktop
+        <span class="screenshot-size">1920 x 1080 px</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SECTIE 4: BROWSER COMPAT ===================== -->
+  <div class="page-break"></div>
+  <h2>4. Browser Compatibiliteit</h2>
+
+  <div class="note-box">
+    <strong>Opmerking:</strong> De tests zijn uitgevoerd met een Chromium-browser. Omdat het project Bootstrap 5 via CDN gebruikt en standaard HTML/CSS/JS, is de verwachting dat het er op alle moderne browsers nagenoeg hetzelfde uitziet.
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Browser</th>
+        <th>Compatibiliteit</th>
+        <th>Opmerking</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Google Chrome</strong></td>
+        <td><span class="badge-pass">Volledig compatibel</span></td>
+        <td>Getest via Chromium — werkt correct</td>
+      </tr>
+      <tr>
+        <td><strong>Microsoft Edge</strong></td>
+        <td><span class="badge-pass">Volledig compatibel</span></td>
+        <td>Zelfde engine als Chrome (Chromium-based)</td>
+      </tr>
+      <tr>
+        <td><strong>Mozilla Firefox</strong></td>
+        <td><span class="badge-pass">Verwacht compatibel</span></td>
+        <td>Bootstrap 5 ondersteunt Firefox volledig</td>
+      </tr>
+      <tr>
+        <td><strong>Apple Safari</strong></td>
+        <td><span class="badge-pass">Verwacht compatibel</span></td>
+        <td>Bootstrap 5 ondersteunt Safari volledig</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ===================== SECTIE 5: RESPONSIVE BEVINDINGEN ===================== -->
+  <h2>5. Responsive Design Bevindingen</h2>
+
+  <h3>Wat goed werkt</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Aspect</th>
+        <th>Beoordeling</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Startscherm layout</strong></td>
+        <td><span class="badge-pass">Goed</span></td>
+        <td>Knoppen schalen mee op alle formaten, tekst blijft leesbaar</td>
+      </tr>
+      <tr>
+        <td><strong>Overzichtsscherm kaarten</strong></td>
+        <td><span class="badge-pass">Goed</span></td>
+        <td>Module-kaarten stapelen netjes verticaal op alle formaten</td>
+      </tr>
+      <tr>
+        <td><strong>Navigatiebalk</strong></td>
+        <td><span class="badge-pass">Goed</span></td>
+        <td>Logo + knoppen passen op mobiel, tablet en desktop</td>
+      </tr>
+      <tr>
+        <td><strong>Vraagscherm</strong></td>
+        <td><span class="badge-pass">Goed</span></td>
+        <td>Scoreknoppen (1-5) passen naast elkaar, ook op mobiel</td>
+      </tr>
+      <tr>
+        <td><strong>Typografie</strong></td>
+        <td><span class="badge-pass">Goed</span></td>
+        <td>Tekst is leesbaar op alle formaten</td>
+      </tr>
+      <tr>
+        <td><strong>Max-width container</strong></td>
+        <td><span class="badge-pass">Goed</span></td>
+        <td>Content beperkt tot 540px, voorkomt te brede layouts op desktop</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Aandachtspunten</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Aspect</th>
+        <th>Beoordeling</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Desktop whitespace</strong></td>
+        <td><span class="badge-warn">Opmerking</span></td>
+        <td>Door de max-width: 540px is er op desktop veel lege ruimte links en rechts. Dit is een bewuste keuze (mobile-first design).</td>
+      </tr>
+      <tr>
+        <td><strong>Navbar op mobiel</strong></td>
+        <td><span class="badge-warn">Klein punt</span></td>
+        <td>De "Speltak wisselen" knop is relatief groot op heel kleine schermen, maar past nog net.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="success-box">
+    <strong>Geen kritieke problemen gevonden.</strong> De applicatie werkt correct op alle geteste formaten. Er zijn geen responsive bugs of layout-problemen gedetecteerd.
+  </div>
+
+  <!-- ===================== SECTIE 6: SAMENVATTING ===================== -->
+  <h2>6. Samenvatting</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Test</th>
+        <th>Resultaat</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Browser (Chromium)</strong></td>
+        <td><span class="badge-pass">Geslaagd</span></td>
+      </tr>
+      <tr>
+        <td><strong>Desktop (1920 x 1080)</strong></td>
+        <td><span class="badge-pass">Geslaagd</span></td>
+      </tr>
+      <tr>
+        <td><strong>Tablet (768 x 1024)</strong></td>
+        <td><span class="badge-pass">Geslaagd</span></td>
+      </tr>
+      <tr>
+        <td><strong>Mobiel (375 x 667)</strong></td>
+        <td><span class="badge-pass">Geslaagd</span></td>
+      </tr>
+      <tr>
+        <td><strong>Responsive design</strong></td>
+        <td><span class="badge-pass">Geslaagd — geen kritieke issues</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="conclusion-card">
+    <h3>Conclusie</h3>
+    <p>De Zelfevaluatie-tool is goed responsive en werkt correct op alle geteste schermformaten. De mobile-first aanpak met Bootstrap 5 zorgt voor een consistente en gebruiksvriendelijke ervaring op mobiel, tablet en desktop.</p>
+  </div>
+
+</body>
+</html>
