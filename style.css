@@ -1,0 +1,402 @@
+/* ============================================================
+   Zelfevaluatie Scouting — Custom Styles (bovenop Bootstrap 5)
+   Huisstijl Scouting Nederland
+   ============================================================ */
+
+/* ---- Huisstijl kleuren ---- */
+:root {
+  --scouting-rood:   #FF0000;
+  --scouting-blauw:  #1A368D;
+  --scouting-geel:   #FFFF00;
+  --scouting-groen:  #31A529;
+}
+
+/* ---- Basis ---- */
+html, body {
+  font-family: Arial, Helvetica, 'Segoe UI', sans-serif;
+  background: #f8f9fa;
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Typografie: koppen ---- */
+h1, .heading-font {
+  font-family: Impact, 'Arial Black', 'Arial Bold', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: Arial, Helvetica, 'Segoe UI', sans-serif;
+  font-weight: bold;
+}
+
+/* ---- Bootstrap overrides ---- */
+.btn-primary {
+  background-color: var(--scouting-blauw) !important;
+  border-color: var(--scouting-blauw) !important;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #122862 !important;
+  border-color: #122862 !important;
+}
+.btn-primary:active {
+  background-color: #0e1f4d !important;
+  border-color: #0e1f4d !important;
+}
+
+.btn-outline-primary {
+  color: var(--scouting-blauw) !important;
+  border-color: var(--scouting-blauw) !important;
+}
+.btn-outline-primary:hover {
+  background-color: var(--scouting-blauw) !important;
+  color: #fff !important;
+}
+
+.bg-primary {
+  background-color: var(--scouting-blauw) !important;
+}
+.text-primary {
+  color: var(--scouting-blauw) !important;
+}
+
+.progress-bar.bg-primary,
+.progress-bar-primary {
+  background-color: var(--scouting-blauw) !important;
+}
+
+/* Override Bootstrap success-kleur naar Scouting-groen */
+.bg-success {
+  background-color: var(--scouting-groen) !important;
+}
+.text-success {
+  color: var(--scouting-groen) !important;
+}
+.progress-bar.bg-success {
+  background-color: var(--scouting-groen) !important;
+}
+
+/* ---- Scherm-containers ---- */
+.screen {
+  display: none;                /* standaard verborgen */
+  animation: fadeIn .3s ease;
+}
+.screen.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0);   }
+}
+
+/* ---- Select-scherm ---- */
+#select-screen {
+  min-height: 100dvh;
+  display: none;               /* JS voegt .active toe */
+}
+#select-screen.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dataset-btn {
+  border-radius: 16px !important;
+  padding: 20px 24px !important;
+  text-align: left;
+  border: none;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.dataset-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,.12);
+}
+.dataset-btn:active {
+  transform: scale(.98);
+}
+
+/* ---- Dataset knoppen specifieke kleuren ---- */
+.btn-scouting-blauw {
+  background-color: var(--scouting-blauw);
+  color: #fff;
+}
+.btn-scouting-blauw:hover {
+  background-color: #122862;
+  color: #fff;
+}
+
+.btn-scouting-groen {
+  background-color: var(--scouting-groen);
+  color: #fff;
+}
+.btn-scouting-groen:hover {
+  background-color: #278a21;
+  color: #fff;
+}
+
+/* ---- Navbar ---- */
+.app-nav {
+  background: #fff;
+  padding: 10px 16px;
+  border-bottom: 2px solid var(--scouting-blauw);
+}
+.app-nav .navbar-brand {
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ---- Logo ---- */
+.scouting-logo-header {
+  height: 32px;
+  width: auto;
+}
+.scouting-logo-select {
+  height: 100px;
+  width: auto;
+}
+
+/* ---- Kaarten ---- */
+.module-card {
+  border: 1px solid #e9ecef;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.04);
+  transition: transform .2s ease, box-shadow .2s ease;
+  margin-bottom: 1.25rem !important; /* Increased spacing between cards */
+  background: #ffffff;
+  overflow: hidden; /* Ensure left indicator border fits correctly */
+}
+.module-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+}
+.module-card .card-body {
+  padding: 20px 24px !important; /* Richer padding inside cards */
+}
+
+/* ---- Score-kaart (resultaten) ---- */
+.score-hero {
+  border-radius: 20px;
+  border: none;
+}
+
+/* ---- Progress-bar animatie ---- */
+.progress-bar {
+  transition: width .6s ease;
+}
+.progress {
+  height: 10px !important;
+  background-color: #e9ecef !important;
+  border-radius: 99px !important;
+}
+
+/* ---- Scale-knoppen (invulscherm) ---- */
+.scale-btn {
+  border-radius: 12px !important;
+  font-weight: 600;
+  font-size: 1.15rem;
+  padding: 14px 0;
+  flex: 1;
+  transition: all .15s ease;
+  min-height: 48px; /* Comfortable touch target for mobile */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.scale-btn:not(.btn-primary):hover {
+  background-color: #e9ecef;
+  border-color: #adb5bd;
+}
+
+/* ---- Vraag-kaart ---- */
+.question-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.05);
+}
+.question-card .card-body {
+  padding: 24px !important;
+}
+
+/* ---- CTA-knop (alle schermen) ---- */
+.cta-btn {
+  border-radius: 14px !important;
+  padding: 14px 0 !important;
+  font-weight: 600;
+  font-size: 1.05rem;
+  min-height: 48px;
+}
+
+/* ---- Legenda-kaart (resultaten) ---- */
+.legend-card {
+  border: none;
+  border-radius: 14px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+}
+
+/* ---- Badge in overzicht (Fix voor blauwe pil contrast) ---- */
+.dataset-badge {
+  background-color: rgba(26, 54, 141, 0.09) !important;
+  color: var(--scouting-blauw) !important;
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+  border: 1.5px solid rgba(26, 54, 141, 0.18) !important;
+  padding: 8px 16px !important;
+  letter-spacing: 0.02em;
+}
+
+/* ---- Hoofdtaak header ---- */
+.hoofdtaak-header {
+  font-family: Arial, Helvetica, 'Segoe UI', sans-serif;
+  font-size: 1.08rem;
+  font-weight: bold;
+  text-transform: none; /* Set to normal sentence case */
+  letter-spacing: normal;
+  line-height: 1.4;
+  color: var(--scouting-blauw);
+  padding: 10px 0 6px;
+  border-bottom: 2.5px solid var(--scouting-blauw);
+  margin-top: 1.9rem;
+  margin-bottom: 1.1rem;
+}
+
+/* ---- Touch Targets & Text helpers ---- */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #495057 !important;
+  border: 1.5px solid #dee2e6;
+  border-radius: 99px;
+  background-color: #fff;
+  transition: all 0.2s ease;
+  min-height: 44px;
+  text-decoration: none !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+.back-btn:hover {
+  background-color: #f8f9fa;
+  color: #212529 !important;
+  border-color: #adb5bd;
+}
+
+.nav-action-btn {
+  padding: 8px 16px !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  border-radius: 10px !important;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-xs  { font-size: .8rem; }
+.text-sm  { font-size: .88rem; }
+.text-md  { font-size: .95rem; }
+.fw-800   { font-weight: 800; }
+.fw-900   { font-weight: 900; }
+
+.screen p {
+  line-height: 1.6;
+}
+
+/* ---- WCAG AA Status- en Contrast Systeem ---- */
+/* 1. Module Card status border indicators */
+.status-card-success {
+  border-left: 5px solid #198754 !important;
+}
+.status-card-warning {
+  border-left: 5px solid #d97706 !important;
+}
+.status-card-danger {
+  border-left: 5px solid #dc3545 !important;
+}
+.status-card-neutral {
+  border-left: 5px solid #adb5bd !important;
+}
+
+/* 2. Badge styles with high contrast text colors */
+.badge-status-success {
+  background-color: rgba(20, 108, 67, 0.08) !important;
+  color: #146c43 !important;
+  border: 1.5px solid rgba(20, 108, 67, 0.2) !important;
+  font-weight: 700 !important;
+}
+.badge-status-warning {
+  background-color: rgba(154, 78, 0, 0.08) !important;
+  color: #9a4e00 !important;
+  border: 1.5px solid rgba(154, 78, 0, 0.25) !important;
+  font-weight: 700 !important;
+}
+.badge-status-danger {
+  background-color: rgba(176, 42, 55, 0.08) !important;
+  color: #b02a37 !important;
+  border: 1.5px solid rgba(176, 42, 55, 0.2) !important;
+  font-weight: 700 !important;
+}
+.badge-status-neutral {
+  background-color: rgba(108, 117, 125, 0.08) !important;
+  color: #5a6268 !important;
+  border: 1.5px solid rgba(108, 117, 125, 0.2) !important;
+  font-weight: 700 !important;
+}
+
+/* 3. Text and Percentages status colors */
+.text-status-success {
+  color: #146c43 !important;
+}
+.text-status-warning {
+  color: #9a4e00 !important;
+}
+.text-status-danger {
+  color: #b02a37 !important;
+}
+.text-status-neutral {
+  color: #5a6268 !important;
+}
+
+/* 4. Progress bar backgrounds */
+.bg-status-success {
+  background-color: #198754 !important;
+}
+.bg-status-warning {
+  background-color: #d97706 !important;
+}
+.bg-status-danger {
+  background-color: #dc3545 !important;
+}
+.bg-status-neutral {
+  background-color: #dee2e6 !important;
+}
+
+/* ---- Responsive hulp ---- */
+@media (max-width: 575.98px) {
+  .scale-btn {
+    font-size: 1.05rem;
+    padding: 10px 0;
+    min-height: 46px;
+  }
+  .scouting-logo-select {
+    height: 85px;
+  }
+  .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .module-card .card-body {
+    padding: 18px 20px !important; /* Slightly smaller on small viewports but still spacious */
+  }
+  .hoofdtaak-header {
+    font-size: 1.05rem;
+  }
+}
