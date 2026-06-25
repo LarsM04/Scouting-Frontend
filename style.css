@@ -21,8 +21,7 @@ html, body {
 
 /* ---- Typografie: koppen ---- */
 h1, .heading-font {
-  font-family: Impact, 'Arial Black', 'Arial Bold', sans-serif;
-  text-transform: uppercase;
+  font-family: 'Arial Black', Impact, 'Arial Bold', sans-serif;
   letter-spacing: 0.02em;
 }
 
@@ -141,6 +140,7 @@ h2, h3, h4, h5, h6 {
 .app-nav {
   background: #fff;
   padding: 10px 16px;
+  border-top: 3px solid var(--scouting-rood);
   border-bottom: 2px solid var(--scouting-blauw);
 }
 .app-nav .navbar-brand {
@@ -311,37 +311,37 @@ h2, h3, h4, h5, h6 {
 }
 
 /* ---- WCAG AA Status- en Contrast Systeem ---- */
-/* 1. Module Card status border indicators */
+/* 1. Module Card status border indicators (Scouting-huisstijlkleuren) */
 .status-card-success {
-  border-left: 5px solid #198754 !important;
+  border-left: 5px solid var(--scouting-groen) !important;
 }
 .status-card-warning {
-  border-left: 5px solid #d97706 !important;
+  border-left: 5px solid #D4A017 !important;
 }
 .status-card-danger {
-  border-left: 5px solid #dc3545 !important;
+  border-left: 5px solid var(--scouting-rood) !important;
 }
 .status-card-neutral {
   border-left: 5px solid #adb5bd !important;
 }
 
-/* 2. Badge styles with high contrast text colors */
+/* 2. Badge styles — Scouting-huisstijlkleuren (toegankelijke varianten) */
 .badge-status-success {
-  background-color: rgba(20, 108, 67, 0.08) !important;
-  color: #146c43 !important;
-  border: 1.5px solid rgba(20, 108, 67, 0.2) !important;
+  background-color: rgba(49, 165, 41, 0.08) !important;
+  color: #1e7a18 !important;
+  border: 1.5px solid rgba(49, 165, 41, 0.2) !important;
   font-weight: 700 !important;
 }
 .badge-status-warning {
-  background-color: rgba(154, 78, 0, 0.08) !important;
-  color: #9a4e00 !important;
-  border: 1.5px solid rgba(154, 78, 0, 0.25) !important;
+  background-color: rgba(212, 160, 23, 0.08) !important;
+  color: #8B6914 !important;
+  border: 1.5px solid rgba(212, 160, 23, 0.25) !important;
   font-weight: 700 !important;
 }
 .badge-status-danger {
-  background-color: rgba(176, 42, 55, 0.08) !important;
-  color: #b02a37 !important;
-  border: 1.5px solid rgba(176, 42, 55, 0.2) !important;
+  background-color: rgba(255, 0, 0, 0.08) !important;
+  color: #CC0000 !important;
+  border: 1.5px solid rgba(255, 0, 0, 0.2) !important;
   font-weight: 700 !important;
 }
 .badge-status-neutral {
@@ -351,29 +351,29 @@ h2, h3, h4, h5, h6 {
   font-weight: 700 !important;
 }
 
-/* 3. Text and Percentages status colors */
+/* 3. Text and Percentages status colors — Scouting-huisstijl */
 .text-status-success {
-  color: #146c43 !important;
+  color: #1e7a18 !important;
 }
 .text-status-warning {
-  color: #9a4e00 !important;
+  color: #8B6914 !important;
 }
 .text-status-danger {
-  color: #b02a37 !important;
+  color: #CC0000 !important;
 }
 .text-status-neutral {
   color: #5a6268 !important;
 }
 
-/* 4. Progress bar backgrounds */
+/* 4. Progress bar backgrounds — Scouting-huisstijlkleuren */
 .bg-status-success {
-  background-color: #198754 !important;
+  background-color: var(--scouting-groen) !important;
 }
 .bg-status-warning {
-  background-color: #d97706 !important;
+  background-color: #D4A017 !important;
 }
 .bg-status-danger {
-  background-color: #dc3545 !important;
+  background-color: var(--scouting-rood) !important;
 }
 .bg-status-neutral {
   background-color: #dee2e6 !important;

@@ -1,61 +1,92 @@
-**Add your own guidelines here**
-<!--
+# Huisstijl Scouting Nederland — Design Guidelines
 
-System Guidelines
+Gebaseerd op: Huisstijlhandleiding Scouting Nederland, versie 4.0 (maart 2015)
 
-Use this file to provide the AI with rules and guidelines you want it to follow.
-This template outlines a few examples of things you can add. You can add your own sections and format it to suit your needs
+---
 
-TIP: More context isn't always better. It can confuse the LLM. Try and add the most important rules you need
+## 1. Kleuren
 
-# General guidelines
+De vier huisstijlkleuren van Scouting Nederland:
 
-Any general rules you want the AI to follow.
-For example:
+| Kleur  | HEX     | RGB             | PMS |
+|--------|---------|-----------------|-----|
+| Rood   | #FF0000 | R=255 G=0 B=0   | 032 |
+| Blauw  | #1A368D | R=26 G=54 B=141 | 286 |
+| Geel   | #FFFF00 | R=255 G=255 B=0 | 109 |
+| Groen  | #31A529 | R=49 G=165 B=41 | 354 |
 
-* Only use absolute positioning when necessary. Opt for responsive and well structured layouts that use flexbox and grid by default
-* Refactor code as you go to keep code clean
-* Keep file sizes small and put helper functions and components in their own files.
+- Het woordmerk is **altijd rood**
+- Het beeldmerk is opgebouwd uit de vier basiskleuren
+- Andere kleuren zijn toegestaan, maar de vier huisstijlkleuren vormen de basis
 
---------------
+---
 
-# Design system guidelines
-Rules for how the AI should make generations look like your company's design system
+## 2. Typografie
 
-Additionally, if you select a design system to use in the prompt box, you can reference
-your design system's components, tokens, variables and components.
-For example:
+### Basisletter: Arial
+Het lettertype Arial is de standaard huisstijlletter voor alle uitingen van Scouting Nederland.
 
-* Use a base font-size of 14px
-* Date formats should always be in the format “Jun 10”
-* The bottom toolbar should only ever have a maximum of 4 items
-* Never use the floating action button with the bottom toolbar
-* Chips should always come in sets of 3 or more
-* Don't use a dropdown if there are 2 or fewer options
+Varianten:
+- Arial Regular (normaal)
+- Arial Bold (vet)
+- Arial Italic (cursief)
+- Arial Bold Italic (vet-cursief)
 
-You can also create sub sections and add more specific details
-For example:
+### Extra lettertype: Impact
+Impact mag worden gebruikt voor het accentueren van titels, tussenkoppen en dergelijke.
+Het sluit goed aan bij de huisstijlletter Arial.
 
+### Woordmerk lettertype: Arial Black
+Het woordmerk "Scouting" is altijd gezet in het lettertype Arial Black.
 
-## Button
-The Button component is a fundamental interactive element in our design system, designed to trigger actions or navigate
-users through the application. It provides visual feedback and clear affordances to enhance user experience.
+---
 
-### Usage
-Buttons should be used for important actions that users need to take, such as form submissions, confirming choices,
-or initiating processes. They communicate interactivity and should have clear, action-oriented labels.
+## 3. Schrijfwijze
 
-### Variants
-* Primary Button
-  * Purpose : Used for the main action in a section or page
-  * Visual Style : Bold, filled with the primary brand color
-  * Usage : One primary button per section to guide users toward the most important action
-* Secondary Button
-  * Purpose : Used for alternative or supporting actions
-  * Visual Style : Outlined with the primary color, transparent background
-  * Usage : Can appear alongside a primary button for less important actions
-* Tertiary Button
-  * Purpose : Used for the least important actions
-  * Visual Style : Text-only with no border, using primary color
-  * Usage : For actions that should be available but not emphasized
--->
+- **Scouting** wordt altijd met een hoofdletter geschreven (eigennaam), ook in samenstellingen:
+  Scoutingkleding, Scoutinghistorie, Scoutingprogramma
+- **Speltakken** worden met een kleine letter geschreven:
+  bevers, welpen, scouts, explorers, roverscouts
+- Woorden die in het algemene taalgebruik aan elkaar worden geschreven, worden dat bij Scouting ook:
+  Scoutingwedstrijden, Scoutingzwemwedstrijden, Scoutingzeilwedstrijden
+- **Logowoorden en titels** worden wél met een hoofdletter geschreven:
+  Scout-In, Scouts Info, Beverpost, Scouty, Flitz, ScoutShop, ScoutProof
+- Bij onderdelen van Scouting gebruiken we kleine letters:
+  regio, admiraliteit, landelijk bestuur, landelijke raad
+- Afkortingen per letter uitgesproken: hoofdletters zonder punten (CWO, EJ, WJ)
+- Afkortingen als woord uitgesproken: beginhoofdletter (Nawaka)
+
+---
+
+## 4. Logo
+
+- Het logo bestaat uit een **beeld- en woordmerk** die niet los van elkaar gebruikt mogen worden
+- Full colour gebruik is **verplicht**, tenzij het echt niet anders mogelijk is
+- Op een gekleurde achtergrond of foto: het logo krijgt een **witte rand**
+- De outline variant wordt alleen gebruikt in **zwart of wit**
+- Het logo mag **niet** worden: geroteerd, verschaald, afgesneden, in afwijkende kleuren, of met toegevoegde/verwijderde elementen
+
+---
+
+## 5. Achtergrondbeelden
+
+Scouting maakt gebruik van zes natuurlijke achtergronden:
+- Zand
+- Hout
+- Blad
+- Steen
+- Water
+- Lucht
+
+---
+
+## 6. CSS Variabelen in dit project
+
+```css
+:root {
+  --scouting-rood:   #FF0000;
+  --scouting-blauw:  #1A368D;
+  --scouting-geel:   #FFFF00;
+  --scouting-groen:  #31A529;
+}
+```

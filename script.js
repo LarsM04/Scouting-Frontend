@@ -27,11 +27,11 @@
     return DATASETS[currentDatasetKey];
   }
 
-  /** Kleur op basis van percentage (toegankelijk voor tekst/contrast) */
+  /** Kleur op basis van percentage (Scouting-huisstijlkleuren, toegankelijk) */
   function getColor(pct) {
-    if (pct > 60) return "#146c43"; // Toegankelijk groen
-    if (pct >= 30) return "#9a4e00"; // Toegankelijk oranje/bruin
-    return "#b02a37"; // Toegankelijk rood
+    if (pct > 60) return "#1e7a18"; // Scouting groen (toegankelijk)
+    if (pct >= 30) return "#8B6914"; // Scouting geel (toegankelijk)
+    return "#CC0000"; // Scouting rood (toegankelijk)
   }
 
   /** Label op basis van percentage */
@@ -49,10 +49,10 @@
     return "danger";
   }
 
-  /** Toegankelijke versie van een brand-kleur voor tekst */
+  /** Toegankelijke versie van een Scouting-huisstijlkleur voor tekst */
   function getAccessibleBrandColor(hexColor) {
-    if (hexColor === "#31A529") return "#146c43";
-    if (hexColor === "#FF0000") return "#b02a37";
+    if (hexColor === "#31A529") return "#1e7a18"; // Scouting groen → donkerder
+    if (hexColor === "#FF0000") return "#CC0000"; // Scouting rood → donkerder
     return hexColor;
   }
 
