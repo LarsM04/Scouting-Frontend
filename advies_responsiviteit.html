@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advies Responsiviteit — Zelfevaluatie Teamleider Scouting</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      color: #1a1a2e;
+      background: #fff;
+      line-height: 1.7;
+      font-size: 11pt;
+      padding: 0;
+    }
+
+    @media print {
+      body { padding: 0; }
+      .page-break { page-break-before: always; }
+      .no-break { page-break-inside: avoid; }
+    }
+
+    .page {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 40px 50px;
+    }
+
+    /* Header */
+    .report-header {
+      border-bottom: 4px solid #1A368D;
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+    .report-header .logo-bar {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .report-header .logo-bar .accent-line {
+      width: 6px;
+      height: 48px;
+      background: linear-gradient(180deg, #FF0000 0%, #1A368D 100%);
+      border-radius: 3px;
+    }
+    .report-header h1 {
+      font-size: 22pt;
+      font-weight: 800;
+      color: #1A368D;
+      margin: 0;
+      line-height: 1.2;
+    }
+    .report-header .subtitle {
+      font-size: 13pt;
+      color: #555;
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    .meta-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 16px;
+      font-size: 10pt;
+      color: #444;
+    }
+    .meta-info span { font-weight: 600; color: #1A368D; }
+
+    /* Sections */
+    h2 {
+      font-size: 14pt;
+      font-weight: 700;
+      color: #1A368D;
+      margin-top: 28px;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #e8ecf4;
+    }
+
+    h3 {
+      font-size: 11.5pt;
+      font-weight: 700;
+      color: #333;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 10px;
+      text-align: justify;
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: #f0f3fa;
+      border-left: 4px solid #1A368D;
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin: 14px 0;
+      font-size: 10.5pt;
+    }
+    .highlight-box strong { color: #1A368D; }
+
+    .highlight-box-green {
+      background: #f0faf0;
+      border-left: 4px solid #31A529;
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin: 14px 0;
+      font-size: 10.5pt;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: 10pt;
+    }
+    thead th {
+      background: #1A368D;
+      color: #fff;
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 10pt;
+    }
+    thead th:first-child { border-radius: 6px 0 0 0; }
+    thead th:last-child { border-radius: 0 6px 0 0; }
+    tbody td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #e8ecf4;
+    }
+    tbody tr:nth-child(even) { background: #f8f9fc; }
+    tbody tr:last-child td:first-child { border-radius: 0 0 0 6px; }
+    tbody tr:last-child td:last-child { border-radius: 0 0 6px 0; }
+
+    code {
+      background: #eef1f8;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 9.5pt;
+      color: #1A368D;
+    }
+
+    ul {
+      margin: 8px 0 12px 20px;
+    }
+    ul li {
+      margin-bottom: 5px;
+    }
+
+    .footer {
+      margin-top: 40px;
+      padding-top: 16px;
+      border-top: 2px solid #e8ecf4;
+      text-align: center;
+      font-size: 9pt;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- HEADER -->
+    <div class="report-header">
+      <div class="logo-bar">
+        <div class="accent-line"></div>
+        <div>
+          <h1>Advies Responsiviteit</h1>
+          <div class="subtitle">Zelfevaluatie Teamleider Scouting</div>
+        </div>
+      </div>
+      <div class="meta-info">
+        <div><span>Klant:</span> Scouting Nederland</div>
+        <div><span>Datum:</span> 25 juni 2026</div>
+        <div><span>Project:</span> Zelfevaluatie-tool voor teamleiders</div>
+        <div><span>Auteur:</span> Lars Mudde</div>
+      </div>
+    </div>
+
+    <!-- 1. INLEIDING -->
+    <h2>1. Inleiding</h2>
+    <p>
+      Dit verslag beschrijft hoe de website "Zelfevaluatie Teamleider Scouting" responsive is gemaakt.
+      Responsive betekent dat de website er goed uitziet en goed werkt op elk schermformaat: van een kleine
+      telefoon tot een groot computerscherm. Hieronder leg ik uit welke keuzes ik heb gemaakt en waarom.
+    </p>
+
+    <!-- 2. AANPAK -->
+    <h2>2. Gekozen aanpak: Mobile-First met Bootstrap 5</h2>
+    <p>
+      Voor dit project heb ik gekozen voor een <strong>mobile-first</strong> aanpak. Dit betekent dat ik
+      eerst heb ontworpen voor kleine schermen (telefoons) en daarna heb aangepast voor grotere schermen
+      (tablets en desktops).
+    </p>
+
+    <div class="highlight-box">
+      <strong>Waarom mobile-first?</strong><br>
+      De meeste teamleiders bij Scouting zullen deze tool waarschijnlijk op hun telefoon gebruiken,
+      bijvoorbeeld tijdens een bijeenkomst of op kamp. Door eerst voor mobiel te ontwerpen, weet je
+      zeker dat de belangrijkste functies altijd goed werken op het kleinste scherm.
+    </div>
+
+    <p>
+      Als basis gebruik ik <strong>Bootstrap 5</strong>, een CSS-framework dat standaard al responsive is.
+      Bootstrap werkt met een grid-systeem en biedt kant-en-klare klassen (zoals <code>container</code>,
+      <code>d-flex</code>, <code>d-grid</code>) die ervoor zorgen dat elementen zich automatisch aanpassen
+      aan het scherm.
+    </p>
+
+    <!-- 3. BREAKPOINTS -->
+    <h2>3. Breakpoints en media queries</h2>
+    <h3>Wat is een breakpoint?</h3>
+    <p>
+      Een breakpoint is een schermgrootte waarbij het ontwerp verandert. Je stelt dit in met een
+      <strong>media query</strong> in CSS. Zodra het scherm kleiner of groter wordt dan een bepaald
+      punt, worden andere stijlregels actief.
+    </p>
+
+    <h3>Gebruikte breakpoints</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Breakpoint</th>
+          <th>Schermgrootte</th>
+          <th>Doelgroep</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>max-width: 575.98px</code></td>
+          <td>Kleiner dan 576px</td>
+          <td>Telefoons (staand)</td>
+        </tr>
+        <tr>
+          <td>Bootstrap standaard (576px–768px)</td>
+          <td>Kleine tablets</td>
+          <td>Via Bootstrap-klassen</td>
+        </tr>
+        <tr>
+          <td>Bootstrap standaard (768px+)</td>
+          <td>Tablets en desktops</td>
+          <td>Via Bootstrap-klassen</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Het hoofdbreakpoint dat ik zelf in CSS heb ingesteld is <strong>575.98px</strong>. Dit is de grens
+      voor kleine telefoons. Bootstrap regelt de rest via zijn eigen ingebouwde breakpoints.
+    </p>
+
+    <h3>Waarom deze keuzes?</h3>
+    <ul>
+      <li><strong>575.98px</strong> is de standaard grens die Bootstrap hanteert voor extra-kleine schermen. Dit past goed bij de schermgroottes van de meeste moderne telefoons (iPhone, Samsung, etc.).</li>
+      <li>De website hoeft niet heel veel verschillende layouts te hebben, omdat het in de basis een formulier is dat je van boven naar beneden doorloopt. Daarom is <strong>één eigen breakpoint</strong> voldoende.</li>
+      <li>Bootstrap handelt de tussenliggende formaten (tablets, kleine laptops) automatisch af met zijn grid-systeem.</li>
+    </ul>
+
+    <!-- 4. MOBIELE AANPASSINGEN -->
+    <div class="page-break"></div>
+    <h2>4. Aanpassingen voor mobiele telefoons</h2>
+    <p>Hieronder beschrijf ik per onderdeel wat ik heb gedaan om de website goed werkbaar te houden op mobiel:</p>
+
+    <div class="no-break">
+      <h3>4.1 Touch-targets (knoppen groot genoeg voor vingers)</h3>
+      <p>
+        Alle knoppen hebben een <strong>minimale hoogte van 44px tot 48px</strong>. Dit is de richtlijn
+        van Apple en Google voor comfortabele touch-bediening. Specifiek:
+      </p>
+      <ul>
+        <li>Schaalbalkknoppen (1 t/m 5): minimaal <strong>46px</strong> hoog op mobiel</li>
+        <li>Navigatieknoppen: minimaal <strong>44px</strong> hoog</li>
+        <li>CTA-knoppen ("Volgende vraag", "Starten"): minimaal <strong>48px</strong> hoog</li>
+      </ul>
+    </div>
+
+    <div class="no-break">
+      <h3>4.2 Leesbare tekst</h3>
+      <ul>
+        <li>Op kleine schermen wordt de lettergrootte van de schaalknoppen iets verkleind (van <code>1.15rem</code> naar <code>1.05rem</code>) zodat alles goed past zonder dat de knoppen te krap worden.</li>
+        <li>Kopjes van taken (hoofdtaak-headers) worden ook iets kleiner (<code>1.05rem</code> in plaats van <code>1.08rem</code>).</li>
+      </ul>
+    </div>
+
+    <div class="no-break">
+      <h3>4.3 Genoeg ruimte aan de zijkanten</h3>
+      <p>
+        Op mobiel krijgt de container <strong>20px padding links en rechts</strong>. Dit voorkomt dat tekst
+        en knoppen te dicht tegen de rand van het scherm zitten, wat op telefoons al snel onleesbaar wordt.
+      </p>
+    </div>
+
+    <div class="no-break">
+      <h3>4.4 Kaarten (module-cards)</h3>
+      <p>
+        De padding binnen de kaarten wordt op kleine schermen iets verkleind (van <code>20px 24px</code>
+        naar <code>18px 20px</code>). Zo blijft er genoeg ruimte, maar gaat er niet te veel schermruimte verloren.
+      </p>
+    </div>
+
+    <div class="no-break">
+      <h3>4.5 Logo</h3>
+      <p>
+        Het Scouting-logo op het startscherm wordt op telefoons iets kleiner weergegeven (van <code>100px</code>
+        naar <code>85px</code> hoog). Dit zorgt ervoor dat de keuze-knoppen sneller in beeld zijn zonder dat
+        de gebruiker hoeft te scrollen.
+      </p>
+    </div>
+
+    <div class="no-break">
+      <h3>4.6 Flexbox en Grid</h3>
+      <p>
+        Door gebruik te maken van CSS Flexbox (<code>d-flex</code>, <code>d-grid</code>, <code>gap-2</code>)
+        passen elementen zich automatisch aan. De schaalknoppen verdelen zich gelijkmatig over de beschikbare
+        breedte, ongeacht het schermformaat.
+      </p>
+    </div>
+
+    <div class="no-break">
+      <h3>4.7 Viewport-eenheden</h3>
+      <p>
+        De hoogte van het selectiescherm is ingesteld op <code>100dvh</code> (dynamic viewport height).
+        Dit zorgt ervoor dat het scherm altijd precies de volledige hoogte van het scherm vult, ook op
+        telefoons waar de adresbalk soms verschuift.
+      </p>
+    </div>
+
+    <!-- 5. TESTEN -->
+    <h2>5. Hoe ik heb getest</h2>
+    <p>De website is getest op meerdere manieren:</p>
+    <ul>
+      <li><strong>Chrome DevTools</strong> — Hiermee heb ik verschillende apparaten gesimuleerd (iPhone SE, Galaxy S20, iPad, etc.)</li>
+      <li><strong>Firefox en Edge</strong> — Om te controleren of de website er in verschillende browsers goed uitziet</li>
+      <li><strong>Verschillende schermgroottes</strong> — 320px, 375px, 414px, 768px, 1024px en 1920px</li>
+    </ul>
+
+    <!-- 6. SAMENVATTING -->
+    <h2>6. Samenvatting</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Keuze</th>
+          <th>Reden</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mobile-first aanpak</td>
+          <td>Gebruikers vullen de tool vooral op hun telefoon in</td>
+        </tr>
+        <tr>
+          <td>Bootstrap 5 grid-systeem</td>
+          <td>Betrouwbare responsiviteit zonder veel extra code</td>
+        </tr>
+        <tr>
+          <td>Breakpoint op 575.98px</td>
+          <td>Standaard voor kleine telefoons, past bij moderne apparaten</td>
+        </tr>
+        <tr>
+          <td>Grote knoppen (44–48px)</td>
+          <td>Makkelijk te bedienen met je vinger</td>
+        </tr>
+        <tr>
+          <td>Flexbox layout</td>
+          <td>Elementen passen zich automatisch aan</td>
+        </tr>
+        <tr>
+          <td>Aanpasbare padding en lettertypes</td>
+          <td>Genoeg ruimte op klein scherm zonder verspilling</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="highlight-box-green">
+      De website is zo gebouwd dat hij op elk apparaat goed werkt. De belangrijkste focus lag op telefoons,
+      omdat teamleiders de tool het vaakst "in het veld" zullen gebruiken.
+    </div>
+
+    <div class="footer">
+      Advies Responsiviteit — Zelfevaluatie Teamleider Scouting — Lars Mudde — Juni 2026
+    </div>
+  </div>
+</body>
+</html>

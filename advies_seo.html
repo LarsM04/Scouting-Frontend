@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advies Zoekmachineoptimalisatie (SEO) — Zelfevaluatie Teamleider Scouting</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      color: #1a1a2e;
+      background: #fff;
+      line-height: 1.7;
+      font-size: 11pt;
+      padding: 0;
+    }
+
+    @media print {
+      body { padding: 0; }
+      .page-break { page-break-before: always; }
+      .no-break { page-break-inside: avoid; }
+    }
+
+    .page {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 40px 50px;
+    }
+
+    /* Header */
+    .report-header {
+      border-bottom: 4px solid #31A529;
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+    .report-header .logo-bar {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .report-header .logo-bar .accent-line {
+      width: 6px;
+      height: 48px;
+      background: linear-gradient(180deg, #31A529 0%, #1A368D 100%);
+      border-radius: 3px;
+    }
+    .report-header h1 {
+      font-size: 22pt;
+      font-weight: 800;
+      color: #31A529;
+      margin: 0;
+      line-height: 1.2;
+    }
+    .report-header .subtitle {
+      font-size: 13pt;
+      color: #555;
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    .meta-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 16px;
+      font-size: 10pt;
+      color: #444;
+    }
+    .meta-info span { font-weight: 600; color: #31A529; }
+
+    /* Sections */
+    h2 {
+      font-size: 14pt;
+      font-weight: 700;
+      color: #31A529;
+      margin-top: 28px;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #e8ecf4;
+    }
+
+    h3 {
+      font-size: 11.5pt;
+      font-weight: 700;
+      color: #333;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 10px;
+      text-align: justify;
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: #f0fafd;
+      border-left: 4px solid #1A368D;
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin: 14px 0;
+      font-size: 10.5pt;
+    }
+    .highlight-box strong { color: #1A368D; }
+
+    .highlight-box-green {
+      background: #f0faf0;
+      border-left: 4px solid #31A529;
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin: 14px 0;
+      font-size: 10.5pt;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: 10pt;
+    }
+    thead th {
+      background: #31A529;
+      color: #fff;
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 10pt;
+    }
+    thead th:first-child { border-radius: 6px 0 0 0; }
+    thead th:last-child { border-radius: 0 6px 0 0; }
+    tbody td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #e8ecf4;
+    }
+    tbody tr:nth-child(even) { background: #f8faf8; }
+    tbody tr:last-child td:first-child { border-radius: 0 0 0 6px; }
+    tbody tr:last-child td:last-child { border-radius: 0 0 6px 0; }
+
+    code {
+      background: #eef8ee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 9.5pt;
+      color: #1e7a18;
+    }
+
+    pre {
+      background: #f5f8f5;
+      padding: 12px;
+      border-radius: 6px;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 9pt;
+      overflow-x: auto;
+      margin: 10px 0;
+      border: 1px solid #e2ece2;
+    }
+
+    ul {
+      margin: 8px 0 12px 20px;
+    }
+    ul li {
+      margin-bottom: 5px;
+    }
+
+    .footer {
+      margin-top: 40px;
+      padding-top: 16px;
+      border-top: 2px solid #e8ecf4;
+      text-align: center;
+      font-size: 9pt;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- HEADER -->
+    <div class="report-header">
+      <div class="logo-bar">
+        <div class="accent-line"></div>
+        <div>
+          <h1>Advies Zoekmachineoptimalisatie (SEO)</h1>
+          <div class="subtitle">Zelfevaluatie Teamleider Scouting</div>
+        </div>
+      </div>
+      <div class="meta-info">
+        <div><span>Klant:</span> Scouting Nederland</div>
+        <div><span>Datum:</span> 25 juni 2026</div>
+        <div><span>Project:</span> Zelfevaluatie-tool voor teamleiders</div>
+        <div><span>Auteur:</span> Lars Mudde</div>
+      </div>
+    </div>
+
+    <!-- 1. INLEIDING -->
+    <h2>1. Inleiding</h2>
+    <p>
+      Dit verslag geeft advies over hoe de website beter gevonden kan worden in zoekmachines zoals Google.
+      Dit noemen we <strong>SEO</strong> (Search Engine Optimization, ofwel zoekmachineoptimalisatie).
+      Hieronder beschrijf ik hoe de klant meer bezoekers kan trekken, welke punten aan de website verbeterd
+      kunnen worden en welke tools gebruikt kunnen worden om de resultaten te meten.
+    </p>
+
+    <!-- 2. BEZOEKERS TREKKEN -->
+    <h2>2. Hoe kan de klant meer bezoekers trekken naar de website?</h2>
+    <p>
+      Om meer bezoekers (zoals teamleiders van lokale Scoutinggroepen) naar de website te trekken,
+      moet de website relevant zijn en bekendgemaakt worden op de juiste plekken.
+    </p>
+
+    <h3>2.1 Goede en relevante inhoud (Content)</h3>
+    <ul>
+      <li><strong>Landingspagina met uitleg:</strong> Voeg een duidelijke tekst toe die uitlegt wat de zelfevaluatie-tool doet, voor wie deze bedoeld is en hoe het helpt. Google kan nu namelijk moeilijk lezen waar de website over gaat, omdat de vragen pas via JavaScript in beeld komen.</li>
+      <li><strong>Zoekwoorden verwerken:</strong> Gebruik termen waarop teamleiders zouden zoeken, zoals <em>"zelfevaluatie scouting"</em>, <em>"competenties teamleider scouting"</em>, of <em>"scouting evaluatieformulier"</em>.</li>
+    </ul>
+
+    <h3>2.2 Promotie binnen Scouting Nederland</h3>
+    <ul>
+      <li><strong>Linken vanaf de hoofdsite:</strong> Plaats een duidelijke link op de landelijke website van Scouting Nederland (scouting.nl) en in de Kennisbank. Google ziet links van betrouwbare websites als een aanbeveling.</li>
+      <li><strong>Interne communicatie:</strong> Deel de link in de officiële nieuwsbrieven voor groepsbegeleiders, praktijkbegeleiders en teamleiders.</li>
+      <li><strong>Sociale media:</strong> Deel de tool via landelijke Scouting-kanalen (Facebook, Instagram, LinkedIn).</li>
+    </ul>
+
+    <!-- 3. VERBETERPUNTEN -->
+    <h2>3. Welke punten kunnen aan de website verbeterd worden?</h2>
+    <p>
+      De website heeft al een goede technische basis (zoals een duidelijke titel en een goede beschrijving in de code),
+      maar er zijn belangrijke technische punten die verbeterd kunnen worden:
+    </p>
+
+    <div class="no-break">
+      <h3>3.1 Structured Data (Gestructureerde gegevens)</h3>
+      <p>
+        Dit is speciale code die je toevoegt in de achterkant van de website. Hierdoor begrijpt Google direct dat het
+        om een web-applicatie (tool) gaat. Voeg de volgende code toe aan de <code>&lt;head&gt;</code>:
+      </p>
+      <pre>
+&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Zelfevaluatie Teamleider Scouting",
+  "description": "Zelfevaluatie-tool voor teamleiders bij Scouting Nederland.",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "All"
+}
+&lt;/script&gt;</pre>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="no-break">
+      <h3>3.2 Open Graph Tags (Voor sociale media)</h3>
+      <p>
+        Hiermee zorg je dat de link er mooi uitziet als deze gedeeld wordt via WhatsApp, Facebook of Slack:
+      </p>
+      <pre>
+&lt;meta property="og:title" content="Zelfevaluatie Teamleider Scouting"&gt;
+&lt;meta property="og:description" content="Beoordeel jezelf op coördinatie, kwaliteitsbewaking en vertegenwoordiging."&gt;
+&lt;meta property="og:image" content="https://jouw-domein.nl/assets/social-share.png"&gt;</pre>
+    </div>
+
+    <div class="no-break">
+      <h3>3.3 Een Sitemap en Robots.txt toevoegen</h3>
+      <ul>
+        <li>Een <code>sitemap.xml</code> is een lijstje met alle pagina's van de website, zodat Google weet wat hij moet indexeren.</li>
+        <li>Een <code>robots.txt</code> vertelt zoekmachines welke mappen ze wel en niet mogen bekijken.</li>
+      </ul>
+    </div>
+
+    <div class="no-break">
+      <h3>3.4 Alt-teksten en HTTPS</h3>
+      <ul>
+        <li>Zorg dat alle afbeeldingen een alternatieve tekst (<code>alt</code>) hebben. Dit helpt zoekmachines én maakt de site toegankelijk voor blinden en slechtzienden.</li>
+        <li>Gebruik altijd een beveiligde verbinding (<strong>HTTPS</strong>). Google straft onbeveiligde websites (HTTP) af.</li>
+      </ul>
+    </div>
+
+    <!-- 4. TOOLS OM SEO TE METEN -->
+    <h2>4. Welke tools kan de klant gebruiken om SEO te meten?</h2>
+    <p>Hieronder staan handige, gratis tools waarmee de klant de prestaties van de website kan volgen:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tool</th>
+          <th>Wat meet je ermee?</th>
+          <th>Waarom gebruiken?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Google Search Console</strong></td>
+          <td>Hoe vaak de site in Google verschijnt en welke zoekwoorden worden gebruikt.</td>
+          <td>Directe informatie van Google zelf over je vindbaarheid.</td>
+        </tr>
+        <tr>
+          <td><strong>Google Lighthouse</strong></td>
+          <td>Technische kwaliteit, snelheid, toegankelijkheid en SEO-score.</td>
+          <td>Ingebouwd in de Chrome-browser, geeft direct verbeterpunten.</td>
+        </tr>
+        <tr>
+          <td><strong>Google PageSpeed Insights</strong></td>
+          <td>De laadsnelheid van de website op zowel mobiel als computer.</td>
+          <td>Snelheid is een directe rankingfactor voor Google.</td>
+        </tr>
+        <tr>
+          <td><strong>Google Analytics</strong></td>
+          <td>Hoeveel bezoekers er komen, waar ze vandaan komen en wat ze doen.</td>
+          <td>Om te meten of campagnes of SEO-aanpassingen echt werken.</td>
+        </tr>
+        <tr>
+          <td><strong>Screaming Frog SEO Spider</strong></td>
+          <td>Scant de website op kapotte links, missende titels of fouten.</td>
+          <td>Uitstekend voor een snelle technische controle van de hele site.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 5. CONCLUSIE -->
+    <h2>5. Conclusie</h2>
+    <div class="highlight-box-green">
+      De website heeft al een goede basis met duidelijke meta-tags. Door structured data toe te voegen,
+      een duidelijke uitlegpagina te schrijven en de tool actief te promoten via de kanalen van Scouting Nederland,
+      kan het aantal gebruikers flink worden verhoogd. Met gratis Google-tools kan de klant dit eenvoudig meten.
+    </div>
+
+    <div class="footer">
+      Advies Zoekmachineoptimalisatie (SEO) — Zelfevaluatie Teamleider Scouting — Lars Mudde — Juni 2026
+    </div>
+  </div>
+</body>
+</html>
